@@ -1,6 +1,8 @@
 # Ekobadge-Meshtastic
 Documentacion sobre como configurar Meshtastic para usar el Badge de EkoParty 2024.
 
+> Ahora soporta Bluetooth
+
 # Requisitos previos
 Antes de comenzar, asegúrate de cumplir con los siguientes requisitos:
 1. **Instalar la extensión `PlatformIO` en VSCode**
