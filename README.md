@@ -3,6 +3,37 @@ Documentacion sobre como configurar Meshtastic para usar el Badge de EkoParty 20
 
 > Ahora soporta Bluetooth
 
+# Web Flasher
+Para cargar el firmware en la tarjeta ESP32-C6 se utilizará la herramienta web de Espressif:
+
+https://espressif.github.io/esptool-js/
+
+Se recomienda utilizar Google Chrome, Microsoft Edge u otro navegador compatible con Web Serial.
+
+1. Conectar la tarjeta
+Conecta la tarjeta ESP32-C6 a la computadora mediante un cable USB de datos.
+Abre la herramienta web.
+Haz clic en Connect.
+Selecciona el puerto correspondiente a la tarjeta.
+Confirma la conexión.
+2. Agregar los archivos
+
+Agrega cada archivo con su dirección de memoria correspondiente:
+
+- 0x0000	`bootloader.bin`
+- 0x8000	`partitions.bin`
+- 0x10000	`firmware.bin`
+
+Es importante comprobar que cada archivo esté asociado con la dirección correcta antes de continuar.
+
+3. Programar la tarjeta
+Verifica nuevamente los archivos y sus direcciones.
+Haz clic en Program.
+Espera hasta que la herramienta indique que la programación terminó correctamente.
+Desconecta y vuelve a conectar la tarjeta, o presiona el botón RESET, para iniciar el firmware.
+
+No desconectes la tarjeta ni cierres el navegador durante la programación.
+
 # Requisitos previos
 Antes de comenzar, asegúrate de cumplir con los siguientes requisitos:
 1. **Instalar la extensión `PlatformIO` en VSCode**
